@@ -14,8 +14,20 @@
     "url": "https://github.com/KrAryan/River/issues"
   },
   "keywords": [
-    "webgl", "threejs", "three", "react", "water", "koi", "pond", "river",
-    "caustics", "shader", "glsl", "animation", "ambient", "background"
+    "webgl",
+    "threejs",
+    "three",
+    "react",
+    "water",
+    "koi",
+    "pond",
+    "river",
+    "caustics",
+    "shader",
+    "glsl",
+    "animation",
+    "ambient",
+    "background"
   ],
   "sideEffects": false,
   "main": "./dist/koi-river.js",
@@ -36,7 +48,8 @@
     "public/assets",
     "index.d.ts",
     "README.md",
-    "CREDITS.md"
+    "CREDITS.md",
+    "LICENSE"
   ],
   "scripts": {
     "dev": "vite",
@@ -51,8 +64,12 @@
     "three": ">=0.160"
   },
   "peerDependenciesMeta": {
-    "react": { "optional": true },
-    "react-dom": { "optional": true }
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
