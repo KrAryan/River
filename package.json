@@ -1,20 +1,64 @@
 {
   "name": "koi-river",
-  "private": true,
   "version": "0.1.0",
+  "description": "Interactive top-down WebGL koi river — calm clear water with real-time caustics, sun light, ripples, falling leaves and swimming koi. Drop-in React component (or vanilla).",
   "type": "module",
+  "license": "MIT",
+  "author": "Aryan (KrAryan)",
+  "homepage": "https://github.com/KrAryan/River#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrAryan/River.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KrAryan/River/issues"
+  },
+  "keywords": [
+    "webgl", "threejs", "three", "react", "water", "koi", "pond", "river",
+    "caustics", "shader", "glsl", "animation", "ambient", "background"
+  ],
+  "sideEffects": false,
+  "main": "./dist/koi-river.js",
+  "module": "./dist/koi-river.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./dist/koi-river.js"
+    },
+    "./engine": {
+      "types": "./index.d.ts",
+      "import": "./dist/koi-river-engine.js"
+    }
+  },
+  "files": [
+    "dist",
+    "public/assets",
+    "index.d.ts",
+    "README.md",
+    "CREDITS.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "build:lib": "vite build --config vite.lib.config.js",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build:lib"
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "three": "^0.180.0"
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "three": ">=0.160"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "react-dom": { "optional": true }
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.180.0",
     "vite": "^6.0.0"
   }
 }

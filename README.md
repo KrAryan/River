@@ -8,12 +8,44 @@ white**, so it's designed to sit on a light/white background with no frame.
 Built with React + Three.js. The render engine itself is framework-agnostic,
 so it can also be used without React (see below).
 
-## Run the demo
+## Install (npm)
+
+```bash
+npm install koi-river three react react-dom
+```
+
+`three` is a peer dependency; `react`/`react-dom` are peers too (optional — only
+needed for the React component, not the vanilla engine).
+
+```jsx
+import KoiRiver from 'koi-river';
+
+<KoiRiver assetsBase="/assets" style={{ width: 'min(94vw, 165vh)' }} />
+```
+
+**Assets:** the scene loads images at runtime. Copy the package's
+`public/assets/` (koi + floor) into a folder your site serves, and point
+`assetsBase` at it (default `/assets`):
+
+```bash
+cp -r node_modules/koi-river/public/assets  public/assets
+```
+
+Vanilla (no React) — import the React-free engine:
+
+```js
+import { KoiRiverEngine } from 'koi-river/engine';
+const engine = new KoiRiverEngine(canvasEl, { assetsBase: '/assets' });
+// engine.dispose() to tear down
+```
+
+## Run the demo / develop locally
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
-npm run build      # production build into dist/
+npm run dev        # http://localhost:5173  (demo page)
+npm run build      # demo app build
+npm run build:lib  # library build into dist/ (the publishable artifact)
 ```
 
 ## Use it as a React component
