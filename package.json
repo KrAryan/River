@@ -43,7 +43,7 @@
     "build": "vite build",
     "build:lib": "vite build --config vite.lib.config.js",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build:lib"
+    "prepare": "npm run build:lib"
   },
   "peerDependencies": {
     "react": ">=18",
